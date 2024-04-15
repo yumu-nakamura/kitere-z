@@ -1,0 +1,49 @@
+{
+  "name": "eleventy-ssg",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:eleventy": "eleventy --serve",
+    "dev:vite": "vite",
+    "dev": "run-p dev:*",
+    "build:eleventy": "cross-env NODE_ENV=production eleventy",
+    "build:vite": "cross-env NODE_ENV=production vite build",
+    "build:prettier": "npx prettier --write ./dist/**/*.html",
+    "build": "run-s build:*",
+    "img": "node modules/imagemin.mjs",
+    "wp-env": "wp-env"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-server-browsersync": "^1.0.2",
+    "@types/jquery": "^3.5.22",
+    "@types/node": "^20.4.5",
+    "@wordpress/env": "^9.0.0",
+    "autoprefixer": "^10.4.14",
+    "cross-env": "^7.0.3",
+    "cssnano": "^6.0.1",
+    "imagemin-gifsicle": "^7.0.0",
+    "imagemin-keep-folder": "^5.3.2",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^10.0.1",
+    "imagemin-webp": "^8.0.0",
+    "mqpacker": "^7.0.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.27",
+    "prettier": "^3.0.3",
+    "vite": "^4.4.7"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2
+  },
+  "dependencies": {
+    "eleventy-sass": "^2.2.3",
+    "ress": "^5.0.2"
+  }
+}

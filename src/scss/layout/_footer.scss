@@ -1,0 +1,59 @@
+@use "../foundation/mixin" as *;
+@use "../foundation/variables" as *;
+
+.l-footer {
+  background: #f6c660;
+  padding-top: 80px;
+  padding-bottom: 30px;
+  border-top: 5px solid #deae48;
+  overflow: hidden;
+  .l-footer__blk {
+    max-width: 1200px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-bottom: 80px;
+    .l-footer__blk--logo {
+      width: 140px;
+    }
+    .l-footer__blk--nav {
+      display: flex;
+      justify-content: space-between;
+      ul {
+        margin-right: 40px;
+        li {
+          margin-right: 25px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  .p-copyright {
+    text-align: center;
+    font-size: 12px;
+  }
+  .l-drawer {
+    transform: translateX(100%);
+    transition: all 300ms ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 60px;
+    background: red;
+    z-index: 99;
+    &.is_open {
+      @include mq("sp") {
+        transform: translateX(0);
+        transition: all 300ms ease;
+      }
+    }
+  }
+}

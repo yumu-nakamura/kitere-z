@@ -1,0 +1,22 @@
+.git
+.svn
+.hg
+node_modules
+.gitignore
+**/*.json
+Readme.md
+
+# editor config
+.idea
+.vscode
+
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# outputs
+# dist

@@ -1,0 +1,23 @@
+---
+permalink: index.html
+relPath: './'
+title:
+description:
+---
+
+<% 
+const baseMeta = { 
+  ttl: '',
+  desc: '',
+  keyword:'',
+  url: '',
+  domain: '',
+  path: '../',
+  pageid: 'top',
+  bodyClass : '',
+};
+%>
+
+<%- include("../_includes/common/foundation/header.ejs",{baseMeta: baseMeta}) %>
+<%- include("../_includes/parts/top/top.ejs",{baseMeta: baseMeta}) %>
+<%- include("../_includes/common/foundation/footer.ejs",{baseMeta: baseMeta}) %> 
